@@ -44,15 +44,19 @@ input[type="file"]::file-selector-button:hover { background: color-mix(in srgb, 
 .dl-flink:hover { color: var(--color-accent-700); padding-left: 5px; }
 .dl-float:hover { transform: translateY(-4px) scale(1.05); filter: brightness(1.06); }
 
-/* photo slot placeholder — stands in until a photograph is dropped in */
-.dl-slot {
-  width: 100%; height: 100%; display: grid; place-items: center; padding: 24px;
+/* Photo slot. Absolutely positioned so it fills the plate exactly: the figure's
+   height comes from `aspect-ratio`, against which a percentage height on a child
+   resolves to auto — the photo would otherwise size to its own intrinsic ratio
+   and spill past the frame. */
+.dl-slot { position: absolute; inset: 0; }
+.dl-slot img { width: 100%; height: 100%; object-fit: cover; }
+.dl-slot-empty {
+  display: grid; place-items: center; padding: 24px;
   text-align: center; font-size: 12px; letter-spacing: .12em; text-transform: uppercase;
   color: color-mix(in srgb, var(--color-text) 45%, transparent);
   background:
     linear-gradient(140deg, color-mix(in srgb, var(--color-accent-200) 55%, transparent), color-mix(in srgb, var(--color-surface) 90%, transparent));
 }
-.dl-slot img { width: 100%; height: 100%; object-fit: cover; }
 
 /* ── responsive (verbatim from the design source) ──────────────────────── */
 @media (max-width: 760px) { .dl-navlinks { display: none !important; } }

@@ -20,7 +20,7 @@ const WA_PATH = ['M7.9 20A9 9 0 1 0 4 16.1L2 22Z']
 const ARROW_PATH = ['M5 12h14', 'm12 5 7 7-7 7']
 
 function Photo({ src, alt, placeholder }) {
-  if (!src) return <div className="dl-slot">{placeholder}</div>
+  if (!src) return <div className="dl-slot dl-slot-empty">{placeholder}</div>
   return <div className="dl-slot"><img src={src} alt={alt} loading="lazy" decoding="async" /></div>
 }
 
@@ -221,7 +221,7 @@ export default function App({ floatingWhatsApp = true }) {
           </div>
           <div className="dl-hero-photo" data-reveal data-delay="140" style={{ position: 'relative', justifySelf: 'end', width: 'min(100%, 520px)' }}>
             <div className="dl-hero-frame" style={{ position: 'absolute', inset: -26, border: '1px solid rgba(225,173,102,.28)', borderRadius: 4, pointerEvents: 'none' }} />
-            <figure ref={parallaxRef} className="plate" style={{ margin: 0, width: '100%', aspectRatio: '4 / 5', borderColor: 'rgba(246,243,238,.12)', boxShadow: '0 28px 70px rgba(0,0,0,.45)', transition: 'transform .6s cubic-bezier(.2,.7,.2,1)' }}>
+            <figure ref={parallaxRef} className="plate" style={{ position: 'relative', overflow: 'hidden', margin: 0, width: '100%', aspectRatio: '4 / 5', borderColor: 'rgba(246,243,238,.12)', boxShadow: '0 28px 70px rgba(0,0,0,.45)', transition: 'transform .6s cubic-bezier(.2,.7,.2,1)' }}>
               <Photo src={HERO_PHOTO} alt="Dubai skyline at dusk" placeholder="Dubai skyline or travel photograph" />
             </figure>
             <img className="dl-hero-logo" src={LOGO} alt="" width="118" height="118" style={{ position: 'absolute', right: -20, bottom: -26, width: 118, height: 118, objectFit: 'cover', borderRadius: '50%', border: '1px solid rgba(225,173,102,.45)', boxShadow: '0 12px 30px rgba(0,0,0,.5)', animation: 'dlDrift 8s ease-in-out infinite' }} />
@@ -413,7 +413,7 @@ export default function App({ floatingWhatsApp = true }) {
 
         <div className="dl-why-grid" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 5fr) minmax(0, 7fr)', gap: '34px clamp(32px, 5vw, 72px)', alignItems: 'start' }}>
           <div data-reveal style={{ position: 'relative' }}>
-            <figure className="plate" style={{ margin: 0, width: '100%', aspectRatio: '4 / 5', boxShadow: 'var(--shadow-md)', animation: 'dlDrift 10s ease-in-out infinite' }}>
+            <figure className="plate" style={{ position: 'relative', overflow: 'hidden', margin: 0, width: '100%', aspectRatio: '4 / 5', boxShadow: 'var(--shadow-md)', animation: 'dlDrift 10s ease-in-out infinite' }}>
               <Photo src={DEIRA_PHOTO} alt="Deira creek, Al Rigga" placeholder="Deira creek · Al Rigga · the team" />
             </figure>
             <div className="dl-why-badge" style={{ position: 'absolute', right: -14, bottom: -20, width: 'min(78%, 260px)', padding: '18px 20px', border: '1px solid var(--color-accent)', borderRadius: 'var(--radius-md)', background: 'var(--color-bg)', boxShadow: 'var(--shadow-md)' }}>
