@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dragon Link Consultancy &amp; Travel Tours L.L.C.</title>
+  <link rel="stylesheet" href="_ds/classical-03eb2ce5-fb5f-4397-a2ef-4b5861e10235/styles.css">
+  <script src="_ds/classical-03eb2ce5-fb5f-4397-a2ef-4b5861e10235/_ds_bundle.js"></script>
+  <script src="./image-slot.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; text-wrap: pretty; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { color: var(--color-accent-700); text-underline-offset: 3px; }
+    a:hover { color: var(--color-accent-600); }
+    @keyframes dlShimmer { 0% { background-position: 0% 50%; } 100% { background-position: 200% 50%; } }
+    @keyframes dlFadeA { from { opacity: 0; transform: translateY(16px) scale(.995); } to { opacity: 1; transform: none; } }
+    @keyframes dlFadeB { from { opacity: 0; transform: translateY(16px) scale(.995); } to { opacity: 1; transform: none; } }
+    @keyframes dlRise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+    @keyframes dlMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @keyframes dlGlow { 0%, 100% { opacity: .38; transform: scale(1); } 50% { opacity: .62; transform: scale(1.06); } }
+    @keyframes dlPulse { 0% { box-shadow: 0 0 0 0 rgba(182,130,53,.45); } 70% { box-shadow: 0 0 0 16px rgba(182,130,53,0); } 100% { box-shadow: 0 0 0 0 rgba(182,130,53,0); } }
+    @keyframes dlDrift { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    @keyframes dlSpinSlow { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
+    .dl-strip::-webkit-scrollbar { display: none; }
+    input[type="file"]::file-selector-button { font: inherit; font-size: 12px; color: var(--color-accent-700); background: transparent; border: 1px solid var(--color-accent); border-radius: 4px; padding: 3px 10px; margin-right: 10px; cursor: pointer; transition: background .25s ease; }
+    input[type="file"]::file-selector-button:hover { background: color-mix(in srgb, var(--color-accent) 14%, transparent); }
+    ::placeholder { color: color-mix(in srgb, var(--color-text) 40%, transparent); }
+    @media (max-width: 760px) { .dl-navlinks { display: none !important; } }
+    @media (max-width: 860px) { .dl-why-grid { grid-template-columns: minmax(0, 1fr) !important; } }
+    @media (max-width: 900px) { .dl-detail-card { position: relative !important; top: auto !important; } }
+    @media (max-width: 1024px) {
+      .dl-footer-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; gap: 30px 28px !important; }
+      .dl-footer-brand { grid-column: 1 / -1; display: grid !important; grid-template-columns: minmax(0, 1fr) auto; gap: 16px 24px; align-items: start; }
+      .dl-footer-brand > p { max-width: 60ch !important; }
+      .dl-footer-brand .dl-footer-social { grid-column: 1 / -1; margin-top: 0 !important; }
+      .dl-footer-links { display: grid; gap: 8px 16px; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+      .dl-hero-photo { justify-self: center !important; width: min(100%, 440px) !important; }
+      .dl-hero-photo .dl-hero-frame { inset: -14px !important; }
+      .dl-hero-photo .dl-hero-logo { right: 8px !important; bottom: -22px !important; width: 88px !important; height: 88px !important; }
+      .dl-why-badge { right: 0 !important; }
+      .dl-why-row { grid-template-columns: 58px minmax(0, 1fr) !important; gap: 6px 16px !important; }
+      .dl-why-row h3 { font-size: 24px !important; }
+      .dl-contact-val { font-size: 20px !important; }
+      .dl-strip { grid-auto-columns: minmax(230px, 1fr) !important; }
+    }
+    @media (max-width: 760px) {
+      .dl-footer-grid { padding-bottom: 0 !important; }
+      .dl-footer-brand { grid-template-columns: minmax(0, 1fr) !important; }
+      .dl-footer-brand .dl-footer-title { font-size: 28px !important; }
+      .dl-footer-bottom { flex-direction: column !important; align-items: flex-start !important; gap: 8px !important; padding-bottom: 88px !important; }
+      .dl-hero-badge { white-space: normal !important; }
+      .dl-hero-stats { gap: 18px 28px !important; }
+      .dl-hero-stats p:first-child { font-size: 30px !important; }
+      .dl-services-note { display: none !important; }
+      .dl-strip { grid-auto-columns: min(78vw, 300px) !important; }
+      .dl-contact-val { font-size: 18px !important; overflow-wrap: anywhere; }
+      .dl-contact-val > span { font-size: 15px !important; display: block; }
+      .dl-why-badge { position: static !important; width: 100% !important; margin-top: 14px; }
+      .dl-why-row { grid-template-columns: minmax(0, 1fr) !important; padding: 22px 0 !important; }
+      .dl-why-row .dl-why-num { grid-row: auto !important; flex-direction: row !important; align-items: center !important; }
+      .dl-why-row .dl-why-num > span:first-child { font-size: 26px !important; }
+      .dl-why-row h3 { font-size: 23px !important; }
+      .dl-form-actions .btn { flex: 1 1 100%; justify-content: center; }
+      .dl-hero-cta .btn { flex: 1 1 100%; justify-content: center; }
+      .dl-contact-cta .btn { flex: 1 1 100%; justify-content: center; }
+    }
+    @media (max-width: 480px) {
+      .dl-footer-links { grid-template-columns: minmax(0, 1fr) !important; }
+      .dl-footer-grid { gap: 26px 20px !important; }
+      .dl-hero-photo .dl-hero-logo { width: 72px !important; height: 72px !important; }
+      .dl-nav-brand .dl-nav-name { font-size: 18px !important; }
+      .dl-nav-brand img { width: 40px !important; height: 40px !important; }
+      .nav .btn-primary { padding-inline: 12px !important; }
+    }
+  </style>
+</helmet>
+
+<nav class="nav" data-autohide style="position: sticky; top: 0; z-index: 30; transform: translateY(0); transition: transform .32s cubic-bezier(.3,.7,.2,1), box-shadow .32s ease; will-change: transform; background: color-mix(in srgb, var(--color-bg) 86%, transparent); backdrop-filter: blur(12px); padding-inline: clamp(20px, 5vw, 72px); gap: var(--space-4); border-bottom: 1px solid var(--color-divider);">
+  <a class="dl-nav-brand" href="#top" style="display: flex; align-items: center; gap: 12px; margin-right: auto; flex: none; white-space: nowrap; text-decoration: none; color: var(--color-text); transition: opacity .3s ease;" style-hover="opacity: .78;">
+    <img src="assets/logo.jpg" alt="Dragon Link" style="width: 46px; height: 46px; mix-blend-mode: multiply; object-fit: cover;">
+    <span style="display: flex; flex-direction: column; line-height: 1.15;">
+      <span class="dl-nav-name" style="font-family: var(--font-heading); font-weight: 600; font-size: 20px; letter-spacing: 0.02em;">Dragon Link</span>
+      <span style="font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-accent-700);">Stronger Together</span>
+    </span>
+  </a>
+  <div class="dl-navlinks" style="display: flex; gap: var(--space-4); align-items: center;">
+    <a href="#services" style="color: inherit; text-decoration: none; font-size: 14px; padding-bottom: 3px; border-bottom: 1px solid transparent; transition: color .3s ease, border-color .3s ease;" style-hover="color: var(--color-accent); border-color: var(--color-accent);">Services</a>
+    <a href="#why" style="color: inherit; text-decoration: none; font-size: 14px; padding-bottom: 3px; border-bottom: 1px solid transparent; transition: color .3s ease, border-color .3s ease;" style-hover="color: var(--color-accent); border-color: var(--color-accent);">Why us</a>
+    <a href="#contact" style="color: inherit; text-decoration: none; font-size: 14px; padding-bottom: 3px; border-bottom: 1px solid transparent; transition: color .3s ease, border-color .3s ease;" style-hover="color: var(--color-accent); border-color: var(--color-accent);">Contact</a>
+  </div>
+  <a class="btn btn-primary" href="https://wa.me/971504308516" target="_blank" rel="noopener" style="white-space: nowrap; transition: background .3s ease, transform .3s ease, box-shadow .3s ease;" style-hover="transform: translateY(-2px); box-shadow: var(--shadow-sm);">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+    WhatsApp
+  </a>
+</nav>
+
+<section id="top" style="position: relative; overflow: hidden; background: #171614; color: #f6f3ee;">
+  <div style="position: absolute; inset: 0; background: radial-gradient(60% 70% at 78% 28%, rgba(182,130,53,.34), transparent 68%), radial-gradient(50% 60% at 8% 88%, rgba(182,130,53,.18), transparent 70%); animation: dlGlow 11s ease-in-out infinite; pointer-events: none;"></div>
+  <div style="position: absolute; top: -140px; right: -140px; width: 460px; height: 460px; border: 1px solid rgba(225,173,102,.16); border-radius: 50%; animation: dlSpinSlow 60s linear infinite; pointer-events: none;"></div>
+  <div style="position: relative; max-width: 1200px; margin: 0 auto; padding: clamp(56px, 7vw, 108px) clamp(20px, 5vw, 72px) clamp(48px, 6vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 44px clamp(32px, 5vw, 84px); align-items: center;">
+    <div>
+      <span class="dl-hero-badge" data-reveal data-delay="0" style="display: inline-flex; align-items: center; gap: 10px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #e1ad66; border: 1px solid rgba(225,173,102,.4); border-radius: 999px; padding: 7px 16px; margin-bottom: 26px; white-space: nowrap;">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: #e1ad66; animation: dlGlow 2.6s ease-in-out infinite;"></span>
+        Al Rigga · Deira · Dubai
+      </span>
+      <h1 data-reveal data-delay="90" style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(46px, 6.4vw, 88px); line-height: 1.03; letter-spacing: -0.012em; margin: 0 0 26px -0.04em;">
+        <span style="display: block;">Your journey,</span>
+        <span style="display: block;">your business,</span>
+        <span style="display: block; background: linear-gradient(100deg, #b68235, #ffe3bf 28%, #e1ad66 52%, #b68235 78%, #ffe3bf); background-size: 220% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: dlShimmer 7s linear infinite;">one trusted link.</span>
+      </h1>
+      <p data-reveal data-delay="170" style="font-size: 17.5px; line-height: 1.7; max-width: 54ch; margin: 0 0 34px; color: rgba(246,243,238,.82);">Dragon Link Consultancy &amp; Travel Tours handles the paperwork and the plane tickets — visas, company formation, PRO services and holidays — from a single desk in Deira, so you never have to chase an office twice.</p>
+      <div class="dl-hero-cta" data-reveal data-delay="240" style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
+        <a class="btn" href="#services" style="min-height: 46px; padding-inline: 26px; font-size: 15px; color: #171614; background: linear-gradient(100deg, #e1ad66, #ffe3bf 45%, #c28d41); border: 1px solid #e1ad66; transition: transform .3s ease, box-shadow .3s ease, filter .3s ease;" style-hover="transform: translateY(-3px); box-shadow: 0 10px 26px rgba(182,130,53,.34); filter: brightness(1.05);">Explore services</a>
+        <a class="btn" href="tel:+971504308516" style="min-height: 46px; padding-inline: 22px; font-size: 15px; color: #f6f3ee; border: 1px solid rgba(246,243,238,.3); transition: border-color .3s ease, background .3s ease, transform .3s ease;" style-hover="border-color: #e1ad66; background: rgba(225,173,102,.12); transform: translateY(-3px);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          +971 50 430 8516
+        </a>
+      </div>
+      <div class="dl-hero-stats" data-reveal data-delay="320" style="display: flex; gap: clamp(24px, 4vw, 48px); flex-wrap: wrap; margin-top: 46px; padding-top: 26px; border-top: 1px solid rgba(246,243,238,.14);">
+        <div><p style="font-family: var(--font-heading); font-weight: 400; font-size: 36px; line-height: 1; margin: 0 0 8px; font-feature-settings: 'tnum' 1; color: #e1ad66;">4</p><p style="margin: 0; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(246,243,238,.62);">Service lines</p></div>
+        <div><p style="font-family: var(--font-heading); font-weight: 400; font-size: 36px; line-height: 1; margin: 0 0 8px; font-feature-settings: 'tnum' 1;">1</p><p style="margin: 0; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(246,243,238,.62);">Point of contact</p></div>
+        <div><p style="font-family: var(--font-heading); font-weight: 400; font-size: 36px; line-height: 1; margin: 0 0 8px; font-feature-settings: 'tnum' 1;">7 days</p><p style="margin: 0; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(246,243,238,.62);">On WhatsApp</p></div>
+      </div>
+    </div>
+    <div class="dl-hero-photo" data-reveal data-delay="140" style="position: relative; justify-self: end; width: min(100%, 520px);">
+      <div class="dl-hero-frame" style="position: absolute; inset: -26px; border: 1px solid rgba(225,173,102,.28); border-radius: 4px; pointer-events: none;"></div>
+      <figure class="plate" data-parallax style="margin: 0; width: 100%; aspect-ratio: 4 / 5; border-color: rgba(246,243,238,.12); box-shadow: 0 28px 70px rgba(0,0,0,.45); transition: transform .6s cubic-bezier(.2,.7,.2,1);">
+        <image-slot id="hero-photo" shape="rect" placeholder="Drop a Dubai skyline or travel photograph" style="width: 100%; height: 100%;"></image-slot>
+      </figure>
+      <img class="dl-hero-logo" src="assets/logo.jpg" alt="" style="position: absolute; right: -20px; bottom: -26px; width: 118px; height: 118px; object-fit: cover; border-radius: 50%; border: 1px solid rgba(225,173,102,.45); box-shadow: 0 12px 30px rgba(0,0,0,.5); animation: dlDrift 8s ease-in-out infinite;">
+    </div>
+  </div>
+</section>
+
+<div style="overflow: hidden; border-bottom: 1px solid var(--color-divider); background: color-mix(in srgb, var(--color-accent-100) 45%, var(--color-bg));">
+  <div style="display: flex; width: max-content; animation: dlMarquee 34s linear infinite;">
+    <sc-for list="{{ ribbon }}" as="r" hint-placeholder-count="10">
+      <span style="display: inline-flex; align-items: center; gap: 22px; padding: 12px 22px; font-family: var(--font-heading); font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent-800); white-space: nowrap;">
+        {{ r.label }}
+        <span style="width: 5px; height: 5px; border-radius: 50%; background: var(--color-accent);"></span>
+      </span>
+    </sc-for>
+  </div>
+</div>
+
+<section id="services" style="max-width: 1200px; margin: 0 auto; padding: clamp(52px, 6vw, 92px) clamp(20px, 5vw, 72px) clamp(44px, 5vw, 76px); scroll-margin-top: 84px;">
+  <div data-reveal style="display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 36px;">
+    <div>
+      <span style="display: flex; align-items: center; gap: 12px; font-size: 12.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 16px;">Services<span style="width: 54px; height: 1px; background: linear-gradient(90deg, var(--color-accent), transparent);"></span></span>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(31px, 3.6vw, 46px); line-height: 1.08; margin: 0;">Choose a service to see what we need from you.</h2>
+    </div>
+    <p class="dl-services-note" style="margin: 0; font-size: 14px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 70%, transparent); max-width: 34ch;">Details and required documents update as you pick. Scroll the strip on smaller screens.</p>
+  </div>
+
+  <div class="dl-strip" data-reveal style="display: grid; grid-auto-flow: column; grid-auto-columns: minmax(250px, 1fr); gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px 6px 14px; margin: 0 -6px; scrollbar-width: none;">
+    <sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
+      <button type="button" onClick="{{ s.select }}" aria-pressed="{{ s.selected }}" style="scroll-snap-align: start; position: relative; overflow: hidden; text-align: left; cursor: pointer; font: inherit; color: var(--color-text); display: flex; flex-direction: column; gap: 14px; padding: 24px 22px 20px; border-radius: var(--radius-md); background: {{ s.bg }}; border: 1px solid {{ s.border }}; box-shadow: {{ s.shadow }}; transform: {{ s.lift }}; transition: border-color .4s ease, background .4s ease, box-shadow .4s ease, transform .4s cubic-bezier(.2,.7,.2,1);" style-hover="border-color: var(--color-accent); transform: translateY(-6px); box-shadow: var(--shadow-md); background: color-mix(in srgb, var(--color-accent-100) 42%, transparent);">
+        <span style="position: absolute; top: 0; left: 0; height: 3px; width: {{ s.barPct }}; background: linear-gradient(90deg, var(--color-accent-600), var(--color-accent-300)); transition: width .5s cubic-bezier(.2,.7,.2,1);"></span>
+        <span style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="display: inline-flex; width: 44px; height: 44px; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid {{ s.iconBorder }}; background: {{ s.iconBg }}; color: var(--color-accent-700); transition: border-color .4s ease, background .4s ease;">{{ s.icon }}</span>
+          <span style="font-family: var(--font-heading); font-size: 17px; letter-spacing: 0.06em; color: {{ s.numColor }}; font-feature-settings: 'tnum' 1; transition: color .4s ease;">{{ s.num }}</span>
+        </span>
+        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 22px; line-height: 1.14;">{{ s.title }}</span>
+        <span style="font-size: 13px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 72%, transparent);">{{ s.lead }}</span>
+        <span style="margin-top: 6px; display: inline-flex; align-items: center; gap: 7px; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: {{ s.cueColor }}; transition: color .4s ease;">{{ s.cue }}
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        </span>
+      </button>
+    </sc-for>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 24px clamp(24px, 3vw, 40px); margin-top: 44px; align-items: start;">
+
+    <div class="dl-detail-card" style="position: sticky; top: 96px; overflow: hidden; display: flex; flex-direction: column; border: 1px solid var(--color-divider); border-radius: var(--radius-lg); padding: clamp(24px, 3vw, 36px); background: color-mix(in srgb, var(--color-surface) 28%, transparent); box-shadow: var(--shadow-sm); animation: {{ anim }} .6s cubic-bezier(.2,.7,.2,1) both;">
+      <span style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--color-accent-600), var(--color-accent-300) 60%, transparent);"></span>
+      <span style="display: flex; align-items: center; gap: 12px; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 14px;">{{ active.num }} · {{ active.title }}<span style="flex: 1; height: 1px; background: linear-gradient(90deg, var(--color-accent-300), transparent);"></span></span>
+      <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(27px, 2.6vw, 34px); line-height: 1.1; margin: 0 0 16px;">{{ active.headline }}</h3>
+      <p style="font-size: 15px; line-height: 1.75; margin: 0 0 26px; color: color-mix(in srgb, var(--color-text) 82%, transparent);">{{ active.body }}</p>
+
+      <span style="display: block; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 60%, transparent); margin-bottom: 10px;">What we handle</span>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 0 26px; border-top: 1px solid var(--color-divider); margin-bottom: 30px;">
+        <sc-for list="{{ active.options }}" as="o" hint-placeholder-count="4">
+          <button type="button" onClick="{{ o.select }}" style="font: inherit; text-align: left; cursor: pointer; background: transparent; border: 0; border-bottom: 1px solid var(--color-divider); padding: 13px 0; display: flex; align-items: center; gap: 12px; color: {{ o.color }}; transition: color .3s ease, padding-left .3s ease;" style-hover="color: var(--color-accent-600); padding-left: 6px;">
+            <span style="width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid var(--color-accent); background: {{ o.dot }}; box-shadow: {{ o.dotGlow }}; flex: none; transition: background .3s ease, box-shadow .3s ease;"></span>
+            <span style="font-size: 14.5px;">{{ o.label }}</span>
+          </button>
+        </sc-for>
+      </div>
+
+      <div style="margin-top: 4px; padding: 22px 24px; border: 1px solid var(--color-accent-300); border-radius: var(--radius-md); background: linear-gradient(160deg, color-mix(in srgb, var(--color-accent-100) 78%, transparent), transparent 78%);">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-accent-700);"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+          <span style="font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent-800);">Required documents · {{ subLabel }}</span>
+        </div>
+        <ol style="margin: 0; padding: 0 0 0 20px; display: grid; gap: 9px; font-size: 14.5px; line-height: 1.5; color: var(--color-accent-900);">
+          <sc-for list="{{ docs }}" as="d" hint-placeholder-count="4">
+            <li>{{ d.label }}</li>
+          </sc-for>
+        </ol>
+        <p style="margin: 16px 0 0; font-size: 12.5px; line-height: 1.5; color: color-mix(in srgb, var(--color-accent-900) 75%, transparent);">{{ active.note }}</p>
+      </div>
+    </div>
+
+    <form onSubmit="{{ submit }}" style="position: relative; overflow: hidden; border: 1px solid var(--color-accent-300); border-radius: var(--radius-lg); padding: clamp(24px, 3vw, 36px); background: color-mix(in srgb, var(--color-accent-100) 32%, transparent); box-shadow: var(--shadow-md); display: flex; flex-direction: column; gap: 18px;">
+      <span style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--color-accent-600), var(--color-accent-300), var(--color-accent-600)); background-size: 200% 100%; animation: dlShimmer 8s linear infinite;"></span>
+      <div style="padding-bottom: 4px; border-bottom: 1px solid var(--color-divider);">
+        <span style="display: flex; align-items: center; gap: 12px; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 14px;">Start your request<span style="flex: 1; height: 1px; background: linear-gradient(90deg, var(--color-accent-300), transparent);"></span></span>
+        <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(27px, 2.6vw, 34px); line-height: 1.1; margin: 0 0 16px;">{{ active.formTitle }}</h3>
+      </div>
+
+      <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 14px;">
+          <div class="field"><label>Full name</label><input class="input" name="name" value="{{ form.name }}" onChange="{{ onField }}" placeholder="As on passport" required style="transition: border-color .3s ease, background .3s ease;" style-hover="background: color-mix(in srgb, var(--color-accent-100) 40%, transparent);"></div>
+          <div class="field"><label>Nationality</label><input class="input" name="nationality" value="{{ form.nationality }}" onChange="{{ onField }}" placeholder="e.g. Filipino" style="transition: border-color .3s ease, background .3s ease;" style-hover="background: color-mix(in srgb, var(--color-accent-100) 40%, transparent);"></div>
+          <div class="field"><label>Phone / WhatsApp</label><input class="input" type="tel" name="phone" value="{{ form.phone }}" onChange="{{ onField }}" placeholder="+971 5x xxx xxxx" required style="transition: border-color .3s ease, background .3s ease;" style-hover="background: color-mix(in srgb, var(--color-accent-100) 40%, transparent);"></div>
+          <div class="field"><label>Email</label><input class="input" type="email" name="email" value="{{ form.email }}" onChange="{{ onField }}" placeholder="you@example.com" style="transition: border-color .3s ease, background .3s ease;" style-hover="background: color-mix(in srgb, var(--color-accent-100) 40%, transparent);"></div>
+        </div>
+        <div class="field">
+          <label>{{ active.optionLabel }}</label>
+          <select class="input" value="{{ subKey }}" onChange="{{ onSub }}" style="appearance: auto;">
+            <sc-for list="{{ active.options }}" as="o" hint-placeholder-count="3">
+              <option value="{{ o.key }}">{{ o.label }}</option>
+            </sc-for>
+          </select>
+        </div>
+        <div class="field"><label>{{ active.messageLabel }}</label><textarea class="input" name="message" value="{{ form.message }}" onChange="{{ onField }}" placeholder="{{ active.messagePlaceholder }}" style="min-height: 78px;"></textarea></div>
+
+        <div style="border-top: 1px solid var(--color-divider); padding-top: 18px; animation: {{ anim }} .6s cubic-bezier(.2,.7,.2,1) both;">
+          <span style="display: block; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 60%, transparent); margin-bottom: 12px;">Upload documents · {{ docCount }} required</span>
+          <div style="display: grid; gap: 12px;">
+            <sc-for list="{{ docs }}" as="d" hint-placeholder-count="4">
+              <div class="field" style="border-left: 2px solid {{ d.mark }}; padding-left: 12px; transition: border-color .35s ease;">
+                <label style="display: flex; justify-content: space-between; gap: 12px;"><span>{{ d.label }}</span><span style="color: var(--color-accent-700); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 45%;">{{ d.status }}</span></label>
+                <input class="input" type="file" accept=".pdf,.jpg,.jpeg,.png" data-doc="{{ d.key }}" onChange="{{ onFile }}" style="padding: 5px 8px; font-size: 12.5px; color: color-mix(in srgb, var(--color-text) 70%, transparent);">
+              </div>
+            </sc-for>
+          </div>
+          <p style="margin: 12px 0 0; font-size: 12px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 60%, transparent);">PDF, JPG or PNG · up to 10 MB each. Missing something? Send what you have — we'll guide you on the rest.</p>
+        </div>
+
+        <div class="dl-form-actions" style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-top: 4px;">
+          <button type="submit" class="btn" style="min-height: 44px; padding-inline: 24px; font-size: 15px; color: #171614; background: linear-gradient(100deg, var(--color-accent-400), var(--color-accent-200) 45%, var(--color-accent-500)); border: 1px solid var(--color-accent); transition: transform .3s ease, box-shadow .3s ease, filter .3s ease;" style-hover="transform: translateY(-3px); box-shadow: 0 10px 24px rgba(182,130,53,.3); filter: brightness(1.04);">Submit request</button>
+          <a class="btn btn-ghost" href="{{ waHref }}" target="_blank" rel="noopener" style="min-height: 44px; font-size: 15px;">Send on WhatsApp instead</a>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+        <div style="padding: 28px 0 12px; animation: dlRise .6s cubic-bezier(.2,.7,.2,1) both;">
+          <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-accent); margin-bottom: 16px;"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+          <h4 style="font-family: var(--font-heading); font-weight: 400; font-size: 27px; margin: 0 0 10px;">Request received, {{ form.name }}.</h4>
+          <p style="font-size: 15px; line-height: 1.7; margin: 0 0 22px; color: color-mix(in srgb, var(--color-text) 80%, transparent);">Our team will review your {{ active.title }} request and reach you on {{ form.phone }} within one working day. For anything urgent, WhatsApp us directly.</p>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a class="btn btn-primary" href="{{ waHref }}" target="_blank" rel="noopener">Open WhatsApp</a>
+            <button type="button" class="btn btn-secondary" onClick="{{ reset }}">New request</button>
+          </div>
+        </div>
+      </sc-if>
+    </form>
+  </div>
+</section>
+
+<section id="why" style="max-width: 1200px; margin: 0 auto; padding: clamp(48px, 6vw, 88px) clamp(20px, 5vw, 72px); border-top: 1px solid var(--color-divider); scroll-margin-top: 84px;">
+  <div data-reveal>
+    <span style="display: flex; align-items: center; gap: 12px; font-size: 12.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 16px;">Why Dragon Link<span style="width: 54px; height: 1px; background: linear-gradient(90deg, var(--color-accent), transparent);"></span></span>
+    <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(31px, 3.6vw, 46px); line-height: 1.08; margin: 0 0 34px; max-width: 26ch;">One desk for the whole move — <span style="background: linear-gradient(100deg, var(--color-accent-600), var(--color-accent-300) 35%, var(--color-accent) 65%, var(--color-accent-600)); background-size: 220% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: dlShimmer 8s linear infinite;">arrival to paperwork.</span></h2>
+  </div>
+
+  <div class="dl-why-grid" style="display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 34px clamp(32px, 5vw, 72px); align-items: start;">
+    <div data-reveal style="position: relative;">
+      <figure class="plate" style="margin: 0; width: 100%; aspect-ratio: 4 / 5; box-shadow: var(--shadow-md); animation: dlDrift 10s ease-in-out infinite;">
+        <image-slot id="deira-photo" shape="rect" placeholder="Drop a photograph — Deira creek, Al Rigga street or the team" style="width: 100%; height: 100%;"></image-slot>
+      </figure>
+      <div class="dl-why-badge" style="position: absolute; right: -14px; bottom: -20px; width: min(78%, 260px); padding: 18px 20px; border: 1px solid var(--color-accent); border-radius: var(--radius-md); background: var(--color-bg); box-shadow: var(--shadow-md);">
+        <p style="margin: 0 0 6px; font-family: var(--font-heading); font-size: 30px; line-height: 1; font-feature-settings: 'tnum' 1; color: var(--color-accent-700);">4 in 1</p>
+        <p style="margin: 0; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 65%, transparent);">Travel · Visas · Setup · PRO</p>
+      </div>
+    </div>
+
+    <div style="display: grid; gap: 0; border-top: 1px solid var(--color-divider);">
+      <div class="dl-why-row" data-reveal data-delay="0" style="display: grid; grid-template-columns: 78px 1fr; gap: 8px 22px; align-items: start; padding: 26px 0 26px 0; border-bottom: 1px solid var(--color-divider); transition: padding-left .4s cubic-bezier(.2,.7,.2,1), background .4s ease;" style-hover="padding-left: 14px; background: color-mix(in srgb, var(--color-accent-100) 38%, transparent);">
+        <span class="dl-why-num" style="grid-row: span 2; display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+          <span style="font-family: var(--font-heading); font-size: 34px; line-height: 1; font-feature-settings: 'tnum' 1; color: var(--color-accent);">01</span>
+          <span style="color: var(--color-accent-700);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path><path d="m9 12 2 2 4-4"></path></svg></span>
+        </span>
+        <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 28px; line-height: 1.15; margin: 0;">Trusted partners</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.75; max-width: 52ch; color: color-mix(in srgb, var(--color-text) 78%, transparent);">Flights, hotels and tours are booked through established tourism partners, so your holiday is priced fairly and backed by people we know.</p>
+      </div>
+      <div class="dl-why-row" data-reveal data-delay="120" style="display: grid; grid-template-columns: 78px 1fr; gap: 8px 22px; align-items: start; padding: 26px 0; border-bottom: 1px solid var(--color-divider); transition: padding-left .4s cubic-bezier(.2,.7,.2,1), background .4s ease;" style-hover="padding-left: 14px; background: color-mix(in srgb, var(--color-accent-100) 38%, transparent);">
+        <span class="dl-why-num" style="grid-row: span 2; display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+          <span style="font-family: var(--font-heading); font-size: 34px; line-height: 1; font-feature-settings: 'tnum' 1; color: var(--color-accent);">02</span>
+          <span style="color: var(--color-accent-700);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="m9 15 2 2 4-4"></path></svg></span>
+        </span>
+        <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 28px; line-height: 1.15; margin: 0;">Paperwork, done properly</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.75; max-width: 52ch; color: color-mix(in srgb, var(--color-text) 78%, transparent);">Visas, Emirates ID, medicals, trade licences — we tell you exactly which documents are needed up front, then handle the offices for you.</p>
+      </div>
+      <div class="dl-why-row" data-reveal data-delay="240" style="display: grid; grid-template-columns: 78px 1fr; gap: 8px 22px; align-items: start; padding: 26px 0; border-bottom: 1px solid var(--color-divider); transition: padding-left .4s cubic-bezier(.2,.7,.2,1), background .4s ease;" style-hover="padding-left: 14px; background: color-mix(in srgb, var(--color-accent-100) 38%, transparent);">
+        <span class="dl-why-num" style="grid-row: span 2; display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+          <span style="font-family: var(--font-heading); font-size: 34px; line-height: 1; font-feature-settings: 'tnum' 1; color: var(--color-accent);">03</span>
+          <span style="color: var(--color-accent-700);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+        </span>
+        <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 28px; line-height: 1.15; margin: 0;">In the heart of Deira</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.75; max-width: 52ch; color: color-mix(in srgb, var(--color-text) 78%, transparent);">Our office in Al Rigga is a short walk from the metro. Drop in, or simply message us on WhatsApp — most requests start with a photo of a passport.</p>
+      </div>
+      <a href="#services" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 26px; justify-self: start; text-decoration: none; font-family: var(--font-heading); font-size: 15px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700); padding-bottom: 4px; border-bottom: 1px solid var(--color-accent-300); transition: gap .3s ease, border-color .3s ease, color .3s ease;" style-hover="gap: 18px; border-color: var(--color-accent); color: var(--color-accent-600);">
+        Start your request
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="position: relative; overflow: hidden; background: #171614; color: #f6f3ee; scroll-margin-top: 84px;">
+  <div style="position: absolute; inset: 0; background: radial-gradient(55% 65% at 12% 20%, rgba(182,130,53,.26), transparent 70%), radial-gradient(45% 55% at 92% 90%, rgba(182,130,53,.18), transparent 72%); animation: dlGlow 13s ease-in-out infinite; pointer-events: none;"></div>
+  <div style="position: relative; max-width: 1200px; margin: 0 auto; padding: clamp(52px, 6vw, 96px) clamp(20px, 5vw, 72px) clamp(48px, 5vw, 84px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 48px clamp(40px, 6vw, 96px); align-items: start;">
+    <div data-reveal>
+      <span style="display: flex; align-items: center; gap: 12px; font-size: 12.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #e1ad66; margin-bottom: 18px;">Contact<span style="width: 54px; height: 1px; background: linear-gradient(90deg, #e1ad66, transparent);"></span></span>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(36px, 4.4vw, 58px); line-height: 1.04; margin: 0 0 20px;">Get in <span style="background: linear-gradient(100deg, #b68235, #ffe3bf 30%, #e1ad66 60%, #b68235); background-size: 220% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: dlShimmer 7s linear infinite;">touch</span></h2>
+      <p style="margin: 0 0 32px; font-size: 16.5px; line-height: 1.8; max-width: 42ch; color: rgba(246,243,238,.78);">Send us a message on WhatsApp, email the documents you already have, or walk into the office in Al Rigga — whichever is easiest for you.</p>
+      <div class="dl-contact-cta" style="display: flex; gap: 14px; flex-wrap: wrap;">
+        <a class="btn" href="{{ waHref }}" target="_blank" rel="noopener" style="min-height: 46px; padding-inline: 24px; font-size: 15px; color: #171614; background: linear-gradient(100deg, #e1ad66, #ffe3bf 45%, #c28d41); border: 1px solid #e1ad66; transition: transform .3s ease, box-shadow .3s ease, filter .3s ease;" style-hover="transform: translateY(-3px); box-shadow: 0 10px 26px rgba(182,130,53,.34); filter: brightness(1.05);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+          Message on WhatsApp
+        </a>
+        <a class="btn" href="#services" style="min-height: 46px; padding-inline: 22px; font-size: 15px; color: #f6f3ee; border: 1px solid rgba(246,243,238,.3); transition: border-color .3s ease, background .3s ease, transform .3s ease;" style-hover="border-color: #e1ad66; background: rgba(225,173,102,.12); transform: translateY(-3px);">Start a request</a>
+      </div>
+      <div style="display: flex; gap: 12px; margin-top: 34px; padding-top: 26px; border-top: 1px solid rgba(246,243,238,.14);">
+        <a href="https://www.instagram.com/dragonlinkconsultravel2026" target="_blank" rel="noopener" aria-label="Instagram" style="width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; border: 1px solid rgba(246,243,238,.28); color: #f6f3ee; transition: border-color .3s ease, color .3s ease, transform .3s ease;" style-hover="border-color: #e1ad66; color: #e1ad66; transform: translateY(-3px);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+        <a href="https://www.facebook.com/p/Dragon-Link-Consultancy-LLC-Travel-and-Tours-61592467724898/" target="_blank" rel="noopener" aria-label="Facebook" style="width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; border: 1px solid rgba(246,243,238,.28); color: #f6f3ee; transition: border-color .3s ease, color .3s ease, transform .3s ease;" style-hover="border-color: #e1ad66; color: #e1ad66; transform: translateY(-3px);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+      </div>
+    </div>
+
+    <div data-reveal data-delay="120" style="display: grid; gap: 0;">
+      <a href="{{ waHref }}" target="_blank" rel="noopener" style="display: grid; grid-template-columns: 30px 1fr; gap: 6px 20px; align-items: start; padding: 22px 0; text-decoration: none; color: #f6f3ee; border-bottom: 1px solid rgba(246,243,238,.14); transition: padding-left .35s ease, color .35s ease;" style-hover="padding-left: 8px; color: #e1ad66;">
+        <span style="grid-row: span 2; color: #e1ad66; padding-top: 4px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg></span>
+        <span style="font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(246,243,238,.55);">Phone &amp; WhatsApp</span>
+        <span class="dl-contact-val" style="font-family: var(--font-heading); font-size: 23px; line-height: 1.4; font-feature-settings: 'tnum' 1;">+971 50 430 8516 · +971 54 385 6161</span>
+      </a>
+      <a href="mailto:inquiry@dragonlinkconsultancy.com" style="display: grid; grid-template-columns: 30px 1fr; gap: 6px 20px; align-items: start; padding: 22px 0; text-decoration: none; color: #f6f3ee; border-bottom: 1px solid rgba(246,243,238,.14); transition: padding-left .35s ease, color .35s ease;" style-hover="padding-left: 8px; color: #e1ad66;">
+        <span style="grid-row: span 2; color: #e1ad66; padding-top: 4px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></span>
+        <span style="font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(246,243,238,.55);">Email</span>
+        <span class="dl-contact-val" style="font-family: var(--font-heading); font-size: 23px; line-height: 1.4; overflow-wrap: anywhere;">inquiry@dragonlinkconsultancy.com</span>
+      </a>
+      <a href="https://maps.google.com/?q=Al+Rigga+Deira+Dubai" target="_blank" rel="noopener" style="display: grid; grid-template-columns: 30px 1fr; gap: 6px 20px; align-items: start; padding: 22px 0; text-decoration: none; color: #f6f3ee; border-bottom: 1px solid rgba(246,243,238,.14); transition: padding-left .35s ease, color .35s ease;" style-hover="padding-left: 8px; color: #e1ad66;">
+        <span style="grid-row: span 2; color: #e1ad66; padding-top: 4px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+        <span style="font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(246,243,238,.55);">Office</span>
+        <span class="dl-contact-val" style="font-family: var(--font-heading); font-size: 23px; line-height: 1.4;">Al Rigga, Deira — Dubai, UAE</span>
+      </a>
+      <div style="display: grid; grid-template-columns: 30px 1fr; gap: 6px 20px; align-items: start; padding: 22px 0;">
+        <span style="grid-row: span 2; color: #e1ad66; padding-top: 4px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg></span>
+        <span style="font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(246,243,238,.55);">Hours</span>
+        <span class="dl-contact-val" style="font-family: var(--font-heading); font-size: 23px; line-height: 1.4;">Sat – Thu, 9:00 – 19:00 <span style="color: rgba(246,243,238,.6); font-size: 18px;">· WhatsApp every day</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="position: relative; overflow: hidden; background: color-mix(in srgb, var(--color-accent-100) 40%, var(--color-bg)); border-top: 2px solid var(--color-accent);">
+  <div class="dl-footer-grid" style="max-width: 1200px; margin: 0 auto; padding: clamp(40px, 5vw, 68px) clamp(20px, 5vw, 72px) 0; display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr) minmax(0, 1fr); gap: 34px clamp(28px, 4vw, 64px);">
+    <div class="dl-footer-brand" style="min-width: 0;">
+      <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
+        <img src="assets/logo.jpg" alt="Dragon Link" style="width: 58px; height: 58px; mix-blend-mode: multiply; object-fit: cover;">
+        <span style="display: flex; flex-direction: column; line-height: 1.1;">
+          <span class="dl-footer-title" style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 3.4vw, 42px); letter-spacing: 0.01em;">Dragon Link</span>
+          <span style="font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--color-accent-700);">Stronger Together</span>
+        </span>
+      </div>
+      <p style="margin: 0; max-width: 42ch; font-size: 14.5px; line-height: 1.75; color: color-mix(in srgb, var(--color-text) 76%, transparent);">Consultancy &amp; Travel Tours L.L.C. — visas, business setup, PRO services and holidays, coordinated from one desk so you deal with one team from start to finish.</p>
+      <div class="dl-footer-social" style="display: flex; gap: 10px; margin-top: 22px;">
+        <a href="https://www.instagram.com/dragonlinkconsultravel2026" target="_blank" rel="noopener" aria-label="Instagram" style="width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--color-accent-300); color: var(--color-accent-700); transition: transform .3s ease, background .3s ease, border-color .3s ease;" style-hover="transform: translateY(-3px); background: color-mix(in srgb, var(--color-accent) 14%, transparent); border-color: var(--color-accent);"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+        <a href="https://www.facebook.com/p/Dragon-Link-Consultancy-LLC-Travel-and-Tours-61592467724898/" target="_blank" rel="noopener" aria-label="Facebook" style="width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--color-accent-300); color: var(--color-accent-700); transition: transform .3s ease, background .3s ease, border-color .3s ease;" style-hover="transform: translateY(-3px); background: color-mix(in srgb, var(--color-accent) 14%, transparent); border-color: var(--color-accent);"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+        <a href="{{ waHref }}" target="_blank" rel="noopener" aria-label="WhatsApp" style="width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--color-accent-300); color: var(--color-accent-700); transition: transform .3s ease, background .3s ease, border-color .3s ease;" style-hover="transform: translateY(-3px); background: color-mix(in srgb, var(--color-accent) 14%, transparent); border-color: var(--color-accent);"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg></a>
+      </div>
+    </div>
+    <div style="min-width: 0;">
+      <span style="display: block; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-700); padding-bottom: 12px; border-bottom: 1px solid var(--color-divider); margin-bottom: 12px;">Services</span>
+      <div class="dl-footer-links" style="display: grid; gap: 9px; font-size: 14px;">
+        <a href="#services" style="text-decoration: none; color: color-mix(in srgb, var(--color-text) 80%, transparent); transition: color .3s ease, padding-left .3s ease;" style-hover="color: var(--color-accent-700); padding-left: 5px;">Travel &amp; Tours</a>
+        <a href="#services" style="text-decoration: none; color: color-mix(in srgb, var(--color-text) 80%, transparent); transition: color .3s ease, padding-left .3s ease;" style-hover="color: var(--color-accent-700); padding-left: 5px;">Visa Assistance</a>
+        <a href="#services" style="text-decoration: none; color: color-mix(in srgb, var(--color-text) 80%, transparent); transition: color .3s ease, padding-left .3s ease;" style-hover="color: var(--color-accent-700); padding-left: 5px;">Business Setup</a>
+        <a href="#services" style="text-decoration: none; color: color-mix(in srgb, var(--color-text) 80%, transparent); transition: color .3s ease, padding-left .3s ease;" style-hover="color: var(--color-accent-700); padding-left: 5px;">Government &amp; PRO</a>
+      </div>
+    </div>
+    <div style="min-width: 0;">
+      <span style="display: block; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-700); padding-bottom: 12px; border-bottom: 1px solid var(--color-divider); margin-bottom: 12px;">Quick links</span>
+      <div class="dl-footer-links" style="display: grid; gap: 9px; font-size: 14px;">
+        <a href="#top" style="text-decoration: none; color: color-mix(in srgb, var(--color-text) 80%, transparent); transition: color .3s ease, padding-left .3s ease;" style-hover="color: var(--color-accent-700); padding-left: 5px;">Home</a>
+        <a href="#services" style="text-decoration: none; color: color-mix(in srgb, var(--color-text) 80%, transparent); transition: color .3s ease, padding-left .3s ease;" style-hover="color: var(--color-accent-700); padding-left: 5px;">Start a request</a>
+        <a href="#why" style="text-decoration: none; color: color-mix(in srgb, var(--color-text) 80%, transparent); transition: color .3s ease, padding-left .3s ease;" style-hover="color: var(--color-accent-700); padding-left: 5px;">Why Dragon Link</a>
+        <a href="#contact" style="text-decoration: none; color: color-mix(in srgb, var(--color-text) 80%, transparent); transition: color .3s ease, padding-left .3s ease;" style-hover="color: var(--color-accent-700); padding-left: 5px;">Contact</a>
+      </div>
+    </div>
+  </div>
+  <div style="max-width: 1200px; margin: 0 auto; padding: 20px clamp(20px, 5vw, 72px) 30px;">
+    <div style="height: 1px; background: linear-gradient(90deg, transparent, var(--color-accent-300), transparent); margin-bottom: 18px;"></div>
+    <div class="dl-footer-bottom" style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 12.5px; color: color-mix(in srgb, var(--color-text) 62%, transparent);">
+      <span>© 2026 Dragon Link Consultancy &amp; Travel Tours L.L.C.</span>
+      <span style="letter-spacing: 0.1em; text-transform: uppercase;">Licensed in Dubai, UAE</span>
+    </div>
+  </div>
+</footer>
+
+<sc-if value="{{ showFloat }}" hint-placeholder-val="{{ true }}">
+  <a href="{{ waHref }}" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" style="position: fixed; right: 20px; bottom: 20px; z-index: 40; width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(140deg, var(--color-accent-400), var(--color-accent-600)); color: #171614; border: 1px solid var(--color-accent-600); animation: dlPulse 3s ease-out infinite; transition: transform .3s ease, filter .3s ease;" style-hover="transform: translateY(-4px) scale(1.05); filter: brightness(1.06);">
+    <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"></path></svg>
+  </a>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;floatingWhatsApp&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behaviour&quot;}}">
+const ICON = (d) => React.createElement('svg', { width: 19, height: 19, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.8, strokeLinecap: 'round', strokeLinejoin: 'round' }, ...d.map((p, i) => React.createElement('path', { key: i, d: p })));
+
+const RIBBON = ['Flight bookings', 'Golden Visa', 'Mainland & free zone setup', 'Emirates ID', 'Holiday packages', 'Family sponsorship', 'Trade licence renewal', 'Document clearing'];
+
+const SERVICES = [
+  { key: 'travel', num: '01', title: 'Travel & Tours', lead: 'Flights, hotels, holiday packages and tour coordination.',
+    headline: 'Holidays and business trips, booked end to end.',
+    body: 'From a single flight to a full family holiday, we coordinate flights, hotels, transfers and tours through trusted tourism partners — one itinerary, one price, one person to call if plans change.',
+    icon: ['M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z'],
+    optionLabel: 'What are you planning?', messageLabel: 'Travel dates & preferences', messagePlaceholder: 'e.g. 2 adults, Georgia, 12–18 Nov, 4-star hotel',
+    formTitle: 'Plan a trip', note: 'For visa-on-arrival destinations, a passport copy is usually enough to quote.',
+    baseDocs: [['passport', 'Passport copy (all travellers)']],
+    options: [
+      { key: 'flights', label: 'Flight bookings', docs: [] },
+      { key: 'hotels', label: 'Hotel reservations', docs: [['dates', 'Preferred dates & city (any format)']] },
+      { key: 'packages', label: 'Holiday packages', docs: [['visa', 'UAE visa / Emirates ID copy']] },
+      { key: 'tours', label: 'Tour coordination', docs: [['group', 'Group list with passport numbers']] },
+    ] },
+  { key: 'visa', num: '02', title: 'Visa Assistance', lead: 'Tourist, visit, digital nomad, family sponsorship and Golden Visa.',
+    headline: 'The right visa, filed right the first time.',
+    body: 'We check eligibility, prepare the file and follow the application through to approval — tourist and visit visas, digital nomad permits, family sponsorship and Golden Visa nominations for investors, professionals and talent.',
+    icon: ['M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z', 'M14 2v4a2 2 0 0 0 2 2h4', 'M12 18a3 3 0 1 0 0-6 3 3 0 0 0 0 6'],
+    optionLabel: 'Visa type', messageLabel: 'Tell us about your situation', messagePlaceholder: 'e.g. Sponsoring my wife and two children, employment visa holder',
+    formTitle: 'Apply for a visa', note: 'Passport must be valid for at least six months. Originals may be requested at a later stage.',
+    baseDocs: [['passport', 'Passport copy (6+ months validity)'], ['photo', 'Passport-size photo, white background']],
+    options: [
+      { key: 'tourist', label: 'Tourist / visit visa', docs: [['ticket', 'Return ticket or travel plan']] },
+      { key: 'nomad', label: 'Digital nomad visa', docs: [['employment', 'Employment contract or business proof'], ['income', 'Bank statements (3 months, income ≥ USD 3,500/mo)'], ['insurance', 'UAE health insurance']] },
+      { key: 'family', label: 'Family sponsorship', docs: [['sponsorEid', 'Sponsor Emirates ID & visa'], ['salary', 'Salary certificate or labour contract'], ['tenancy', 'Attested tenancy contract (Ejari)'], ['relation', 'Attested marriage / birth certificate']] },
+      { key: 'golden', label: 'Golden Visa', docs: [['eligibility', 'Eligibility proof (title deed, degree, investment or award)'], ['eid', 'Emirates ID (if resident)'], ['insurance', 'UAE health insurance']] },
+    ] },
+  { key: 'business', num: '03', title: 'Business Setup', lead: 'Mainland & free zone formation, trade licence issuance and renewal.',
+    headline: 'Open in Dubai without the guesswork.',
+    body: 'We help you choose between mainland and free zone, reserve the trade name, draft the paperwork and collect the licence — then keep it renewed year after year so the business never stalls on an expiry date.',
+    icon: ['M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16', 'M2 7h20v13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z'],
+    optionLabel: 'Setup type', messageLabel: 'Proposed activity & trade name', messagePlaceholder: 'e.g. General trading, 2 shareholders, names: “Nile Star”',
+    formTitle: 'Set up a company', note: 'Shareholders currently employed in the UAE may need an NOC from their sponsor.',
+    baseDocs: [['passport', 'Passport copies of all shareholders'], ['names', 'Three proposed trade names']],
+    options: [
+      { key: 'mainland', label: 'Mainland company formation', docs: [['entry', 'UAE entry stamp / visa copy'], ['activity', 'Business activity description'], ['noc', 'NOC from current sponsor (if employed)']] },
+      { key: 'freezone', label: 'Free zone company formation', docs: [['entry', 'UAE entry stamp / visa copy'], ['activity', 'Business activity description']] },
+      { key: 'licence', label: 'Trade licence issuance', docs: [['moa', 'Memorandum of association / LSA agreement'], ['tenancy', 'Office tenancy contract (Ejari)']] },
+      { key: 'renewal', label: 'Trade licence renewal', docs: [['licence', 'Current trade licence copy'], ['tenancy', 'Valid tenancy contract (Ejari)']] },
+    ] },
+  { key: 'pro', num: '04', title: 'Government & PRO Services', lead: 'Document clearing, Emirates ID, medical testing and legal coordination.',
+    headline: 'Government offices, handled on your behalf.',
+    body: 'Typing, submissions, follow-ups and collections across immigration, Emirates ID, medical fitness centres and other authorities — plus general legal and administrative coordination so you spend your day at work, not in a queue.',
+    icon: ['M3 22h18', 'M6 18v-7', 'M10 18v-7', 'M14 18v-7', 'M18 18v-7', 'M12 2 2 7h20z'],
+    optionLabel: 'Service required', messageLabel: 'Anything we should know?', messagePlaceholder: 'e.g. Visa expires on 30 Sep, need Emirates ID renewal',
+    formTitle: 'Request PRO assistance', note: 'Timelines depend on the authority; we confirm the expected turnaround before starting.',
+    baseDocs: [['passport', 'Passport copy'], ['visa', 'Current UAE visa / entry permit']],
+    options: [
+      { key: 'clearing', label: 'Document clearing', docs: [['documents', 'Documents to be processed or attested']] },
+      { key: 'eid', label: 'Emirates ID processing', docs: [['photo', 'Passport-size photo, white background'], ['oldEid', 'Existing Emirates ID (renewal only)']] },
+      { key: 'medical', label: 'Medical testing guidance', docs: [['photo', 'Passport-size photo, white background']] },
+      { key: 'legal', label: 'Legal & administrative coordination', docs: [['documents', 'Relevant contracts or letters'], ['eid', 'Emirates ID copy']] },
+    ] },
+];
+
+class Component extends DCLogic {
+  state = { svc: 'visa', sub: 'tourist', anim: 'dlFadeA', form: { name: '', nationality: '', phone: '', email: '', message: '' }, files: {}, sent: false };
+
+  componentDidMount() {
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce && 'IntersectionObserver' in window) {
+      const els = Array.from(document.querySelectorAll('[data-reveal]'));
+      const show = (el) => {
+        if (el.dataset.revealed) return;
+        el.dataset.revealed = '1';
+        const d = parseInt(el.dataset.delay || '0', 10);
+        el.style.animation = `dlRise .8s cubic-bezier(.2,.7,.2,1) ${d}ms both`;
+        el.style.opacity = '';
+      };
+      let delivered = false;
+      const io = new IntersectionObserver((entries) => {
+        // hide-on-first-callback: only dim pending elements once the observer proves it delivers
+        if (!delivered) {
+          delivered = true;
+          els.forEach((el) => { if (!el.dataset.revealed) el.style.opacity = '0'; });
+        }
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          show(e.target);
+          io.unobserve(e.target);
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+      els.forEach((el) => io.observe(el));
+      // unconditional safety net — nothing can stay stranded at opacity 0
+      this._revealTimer = setTimeout(() => els.forEach(show), 1200);
+    }
+    if (!reduce) {
+      let last = window.scrollY, hidden = false;
+      this._onScroll = () => {
+        const y0 = window.scrollY;
+        const el = document.querySelector('[data-parallax]');
+        if (el) el.style.transform = `translateY(${Math.max(-26, Math.min(26, (y0 - 120) * -0.06))}px)`;
+
+        const nav = document.querySelector('[data-autohide]');
+        if (nav) {
+          const dy = y0 - last;
+          if (Math.abs(dy) > 4) {
+            if (dy > 0 && y0 > 140 && !hidden) {
+              hidden = true;
+              nav.style.transform = `translateY(-${nav.offsetHeight + 6}px)`;
+              nav.style.boxShadow = 'none';
+            } else if (dy < 0 && hidden) {
+              hidden = false;
+              nav.style.transform = 'translateY(0)';
+              nav.style.boxShadow = y0 > 140 ? 'var(--shadow-sm)' : 'none';
+            }
+            last = y0;
+          }
+          if (y0 <= 140 && hidden) { hidden = false; nav.style.transform = 'translateY(0)'; nav.style.boxShadow = 'none'; }
+        }
+      };
+      window.addEventListener('scroll', this._onScroll, { passive: true });
+    }
+  }
+
+  componentWillUnmount() {
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if (this._revealTimer) clearTimeout(this._revealTimer);
+  }
+
+  pick(svcKey) {
+    this.setState((s) => {
+      const svc = SERVICES.find((x) => x.key === svcKey);
+      return { svc: svcKey, sub: svc.options[0].key, anim: s.anim === 'dlFadeA' ? 'dlFadeB' : 'dlFadeA', files: {}, sent: false };
+    });
+  }
+
+  renderVals() {
+    const st = this.state;
+    const active = SERVICES.find((s) => s.key === st.svc);
+    const sub = active.options.find((o) => o.key === st.sub) || active.options[0];
+    const docs = [...active.baseDocs, ...sub.docs].map(([key, label]) => ({
+      key, label,
+      status: st.files[key] ? 'Attached · ' + st.files[key] : 'Required',
+      mark: st.files[key] ? 'var(--color-accent)' : 'var(--color-divider)',
+    }));
+    const services = SERVICES.map((s) => {
+      const on = s.key === st.svc;
+      return { ...s, icon: ICON(s.icon), selected: on, select: () => this.pick(s.key),
+        bg: on ? 'linear-gradient(160deg, color-mix(in srgb, var(--color-accent-100) 85%, transparent), color-mix(in srgb, var(--color-bg) 92%, transparent))' : 'transparent',
+        border: on ? 'var(--color-accent)' : 'var(--color-divider)',
+        iconBorder: on ? 'var(--color-accent)' : 'var(--color-divider)',
+        iconBg: on ? 'color-mix(in srgb, var(--color-accent-200) 55%, transparent)' : 'transparent',
+        numColor: on ? 'var(--color-accent-700)' : 'color-mix(in srgb, var(--color-text) 42%, transparent)',
+        shadow: on ? 'var(--shadow-md)' : 'none',
+        lift: on ? 'translateY(-6px)' : 'none',
+        barPct: on ? '100%' : '0%',
+        cue: on ? 'Selected' : 'View details',
+        cueColor: on ? 'var(--color-accent-700)' : 'color-mix(in srgb, var(--color-text) 50%, transparent)' };
+    });
+    const options = active.options.map((o) => {
+      const on = o.key === sub.key;
+      return { ...o, select: () => this.setState({ sub: o.key }),
+        color: on ? 'var(--color-accent-700)' : 'var(--color-text)',
+        dot: on ? 'var(--color-accent)' : 'transparent',
+        dotGlow: on ? '0 0 0 4px color-mix(in srgb, var(--color-accent) 18%, transparent)' : 'none' };
+    });
+    const f = st.form;
+    const waText = `Hello Dragon Link, I would like help with ${active.title} — ${sub.label}.` + (f.name ? `\nName: ${f.name}` : '') + (f.nationality ? `\nNationality: ${f.nationality}` : '') + (f.message ? `\nDetails: ${f.message}` : '');
+    return {
+      services, active: { ...active, options }, docs, docCount: docs.length, subKey: sub.key, subLabel: sub.label, anim: st.anim,
+      ribbon: [...RIBBON, ...RIBBON].map((label, i) => ({ label, key: i })),
+      form: f, sent: st.sent, notSent: !st.sent,
+      showFloat: this.props.floatingWhatsApp ?? true,
+      waHref: 'https://wa.me/971504308516?text=' + encodeURIComponent(waText),
+      onField: (e) => this.setState({ form: { ...this.state.form, [e.target.name]: e.target.value } }),
+      onSub: (e) => this.setState({ sub: e.target.value }),
+      onFile: (e) => { const k = e.target.dataset.doc, file = e.target.files && e.target.files[0]; this.setState({ files: { ...this.state.files, [k]: file ? file.name : undefined } }); },
+      submit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
+      reset: () => this.setState({ sent: false, files: {}, form: { name: '', nationality: '', phone: '', email: '', message: '' } }),
+    };
+  }
+}
+</script>
+</body>
+</html>

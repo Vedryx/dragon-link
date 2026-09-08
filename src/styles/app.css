@@ -1,0 +1,104 @@
+/* Dragon Link — page styles. Ported from the Claude Design source; the
+   `style-hover` attributes of the .dc.html become real :hover rules here. */
+
+html { scroll-behavior: smooth; }
+body { margin: 0; text-wrap: pretty; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+a { color: var(--color-accent-700); text-underline-offset: 3px; }
+a:hover { color: var(--color-accent-600); }
+
+@keyframes dlShimmer { 0% { background-position: 0% 50%; } 100% { background-position: 200% 50%; } }
+@keyframes dlFadeA { from { opacity: 0; transform: translateY(16px) scale(.995); } to { opacity: 1; transform: none; } }
+@keyframes dlFadeB { from { opacity: 0; transform: translateY(16px) scale(.995); } to { opacity: 1; transform: none; } }
+@keyframes dlRise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+@keyframes dlMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes dlGlow { 0%, 100% { opacity: .38; transform: scale(1); } 50% { opacity: .62; transform: scale(1.06); } }
+@keyframes dlPulse { 0% { box-shadow: 0 0 0 0 rgba(182,130,53,.45); } 70% { box-shadow: 0 0 0 16px rgba(182,130,53,0); } 100% { box-shadow: 0 0 0 0 rgba(182,130,53,0); } }
+@keyframes dlDrift { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes dlSpinSlow { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+.dl-strip::-webkit-scrollbar { display: none; }
+input[type="file"]::file-selector-button { font: inherit; font-size: 12px; color: var(--color-accent-700); background: transparent; border: 1px solid var(--color-accent); border-radius: 4px; padding: 3px 10px; margin-right: 10px; cursor: pointer; transition: background .25s ease; }
+input[type="file"]::file-selector-button:hover { background: color-mix(in srgb, var(--color-accent) 14%, transparent); }
+::placeholder { color: color-mix(in srgb, var(--color-text) 40%, transparent); }
+
+/* ── hover states (were `style-hover` in the design source) ─────────────── */
+.dl-nav-brand:hover { opacity: .78; }
+.dl-navlink:hover { color: var(--color-accent); border-color: var(--color-accent); }
+.dl-btn-lift:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+.dl-btn-gold:hover { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(182,130,53,.34); filter: brightness(1.05); }
+.dl-btn-gold-soft:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(182,130,53,.3); filter: brightness(1.04); }
+.dl-btn-outline-light:hover { border-color: #e1ad66; background: rgba(225,173,102,.12); transform: translateY(-3px); }
+.dl-svc-card:hover { border-color: var(--color-accent) !important; transform: translateY(-6px) !important; box-shadow: var(--shadow-md) !important; background: color-mix(in srgb, var(--color-accent-100) 42%, transparent) !important; }
+.dl-opt:hover { color: var(--color-accent-600) !important; padding-left: 6px; }
+.dl-input-hover:hover { background: color-mix(in srgb, var(--color-accent-100) 40%, transparent); }
+.dl-why-row:hover { padding-left: 14px; background: color-mix(in srgb, var(--color-accent-100) 38%, transparent); }
+.dl-cta-link:hover { gap: 18px; border-color: var(--color-accent); color: var(--color-accent-600); }
+.dl-social-dark:hover { border-color: #e1ad66; color: #e1ad66; transform: translateY(-3px); }
+.dl-contact-row:hover { padding-left: 8px; color: #e1ad66; }
+.dl-social-light:hover { transform: translateY(-3px); background: color-mix(in srgb, var(--color-accent) 14%, transparent); border-color: var(--color-accent); }
+.dl-flink:hover { color: var(--color-accent-700); padding-left: 5px; }
+.dl-float:hover { transform: translateY(-4px) scale(1.05); filter: brightness(1.06); }
+
+/* photo slot placeholder — stands in until a photograph is dropped in */
+.dl-slot {
+  width: 100%; height: 100%; display: grid; place-items: center; padding: 24px;
+  text-align: center; font-size: 12px; letter-spacing: .12em; text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-text) 45%, transparent);
+  background:
+    linear-gradient(140deg, color-mix(in srgb, var(--color-accent-200) 55%, transparent), color-mix(in srgb, var(--color-surface) 90%, transparent));
+}
+.dl-slot img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ── responsive (verbatim from the design source) ──────────────────────── */
+@media (max-width: 760px) { .dl-navlinks { display: none !important; } }
+@media (max-width: 860px) { .dl-why-grid { grid-template-columns: minmax(0, 1fr) !important; } }
+@media (max-width: 900px) { .dl-detail-card { position: relative !important; top: auto !important; } }
+@media (max-width: 1024px) {
+  .dl-footer-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; gap: 30px 28px !important; }
+  .dl-footer-brand { grid-column: 1 / -1; display: grid !important; grid-template-columns: minmax(0, 1fr) auto; gap: 16px 24px; align-items: start; }
+  .dl-footer-brand > p { max-width: 60ch !important; }
+  .dl-footer-brand .dl-footer-social { grid-column: 1 / -1; margin-top: 0 !important; }
+  .dl-footer-links { display: grid; gap: 8px 16px; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .dl-hero-photo { justify-self: center !important; width: min(100%, 440px) !important; }
+  .dl-hero-photo .dl-hero-frame { inset: -14px !important; }
+  .dl-hero-photo .dl-hero-logo { right: 8px !important; bottom: -22px !important; width: 88px !important; height: 88px !important; }
+  .dl-why-badge { right: 0 !important; }
+  .dl-why-row { grid-template-columns: 58px minmax(0, 1fr) !important; gap: 6px 16px !important; }
+  .dl-why-row h3 { font-size: 24px !important; }
+  .dl-contact-val { font-size: 20px !important; }
+  .dl-strip { grid-auto-columns: minmax(230px, 1fr) !important; }
+}
+@media (max-width: 760px) {
+  .dl-footer-grid { padding-bottom: 0 !important; }
+  .dl-footer-brand { grid-template-columns: minmax(0, 1fr) !important; }
+  .dl-footer-brand .dl-footer-title { font-size: 28px !important; }
+  .dl-footer-bottom { flex-direction: column !important; align-items: flex-start !important; gap: 8px !important; padding-bottom: 88px !important; }
+  .dl-hero-badge { white-space: normal !important; }
+  .dl-hero-stats { gap: 18px 28px !important; }
+  .dl-hero-stats p:first-child { font-size: 30px !important; }
+  .dl-services-note { display: none !important; }
+  .dl-strip { grid-auto-columns: min(78vw, 300px) !important; }
+  .dl-contact-val { font-size: 18px !important; overflow-wrap: anywhere; }
+  .dl-contact-val > span { font-size: 15px !important; display: block; }
+  .dl-why-badge { position: static !important; width: 100% !important; margin-top: 14px; }
+  .dl-why-row { grid-template-columns: minmax(0, 1fr) !important; padding: 22px 0 !important; }
+  .dl-why-row .dl-why-num { grid-row: auto !important; flex-direction: row !important; align-items: center !important; }
+  .dl-why-row .dl-why-num > span:first-child { font-size: 26px !important; }
+  .dl-why-row h3 { font-size: 23px !important; }
+  .dl-form-actions .btn { flex: 1 1 100%; justify-content: center; }
+  .dl-hero-cta .btn { flex: 1 1 100%; justify-content: center; }
+  .dl-contact-cta .btn { flex: 1 1 100%; justify-content: center; }
+}
+@media (max-width: 480px) {
+  .dl-footer-links { grid-template-columns: minmax(0, 1fr) !important; }
+  .dl-footer-grid { gap: 26px 20px !important; }
+  .dl-hero-photo .dl-hero-logo { width: 72px !important; height: 72px !important; }
+  .dl-nav-brand .dl-nav-name { font-size: 18px !important; }
+  .dl-nav-brand img { width: 40px !important; height: 40px !important; }
+  .nav .btn-primary { padding-inline: 12px !important; }
+}
