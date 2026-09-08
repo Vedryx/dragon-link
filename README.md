@@ -33,6 +33,7 @@ src/data.js           service catalogue: options, required documents, copy
 src/styles/tokens.css design-system tokens ("Classical") — the source of truth for the look
 src/styles/app.css    page styles; the design's `style-hover` attributes as real :hover rules
 public/assets/        logo and photography
+design/               the Claude Design source, kept for reference — see design/README.md
 ```
 
 ## Content notes
